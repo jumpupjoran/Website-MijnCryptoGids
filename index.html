@@ -102,17 +102,20 @@
       padding: 2rem 1rem;
     }
 
-    .reviews-section {
+.reviews-section {
   margin: 3rem 0;
   padding: 2.5rem;
   background-color: #fff;
   border-radius: 16px;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  position: relative;
 }
 
 .reviews-section h2 {
   margin-bottom: 1.5rem;
   color: #5b21b6;
+  font-size: 1.75rem;
 }
 
 .review-scroll-container {
@@ -122,25 +125,58 @@
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 1rem;
+  padding-right: 2rem;
+  margin-right: -2rem; /* allows the "peek" on mobile */
+}
+
+.review-scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.review-scroll-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
 }
 
 .review-card {
-  flex: 0 0 300px;
+  flex: 0 0 85%; /* show 85% of card width so part of the next one is visible */
+  max-width: 340px;
   scroll-snap-align: start;
-  background-color: #f5f3ff;
-  padding: 1.5rem;
+  background-color: #ffffff;
+  padding: 1.5rem 1.75rem;
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(109, 40, 217, 0.08);
-  font-size: 0.95rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+  font-size: 0.975rem;
   color: #374151;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 220px; /* ensures all content fits neatly */
 }
+
 .review-card p {
-  margin-bottom: 1rem;
+  margin: 1rem 0;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
 }
-.review-card span {
+
+.review-author {
+  margin-top: auto;
   font-size: 0.875rem;
   color: #6b7280;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
 }
+
+.stars {
+  color: #f59e0b;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
 
     
   </style>
@@ -184,27 +220,47 @@
       <a href="#">📅 Boek jouw gratis intakegesprek</a>
     </div>
 
-    <div class="reviews-section">
+   <div class="reviews-section">
   <h2>Wat anderen zeggen over MijnCryptoGids</h2>
   <div class="review-scroll-container">
     <div class="review-card">
+      <div class="stars">★★★★★</div>
       <p>“Ik had totaal geen idee waar ik moest beginnen, maar Joran legde alles superduidelijk uit. Geen verkooppraat, gewoon eerlijk advies.”</p>
-      <span><strong>– Sofie (32)</strong>, Leerkracht</span>
+      <div class="review-author">
+        <strong>Sofie (32)</strong>  
+        <span>Leerkracht</span>
+      </div>
     </div>
+
     <div class="review-card">
+      <div class="stars">★★★★★</div>
       <p>“Door MijnCryptoGids heb ik mijn eerste stappen in crypto gezet zonder stress. Alles werd visueel getoond, stap voor stap.”</p>
-      <span><strong>– Pieter (45)</strong>, Zelfstandige</span>
+      <div class="review-author">
+        <strong>Pieter (45)</strong>  
+        <span>Zelfstandige</span>
+      </div>
     </div>
+
     <div class="review-card">
+      <div class="stars">★★★★★</div>
       <p>“De uitleg was helder, het gesprek was ontspannen, en ik voelde mij eindelijk veilig om zelf met crypto aan de slag te gaan.”</p>
-      <span><strong>– Ayla (28)</strong>, HR Manager</span>
+      <div class="review-author">
+        <strong>Ayla (28)</strong>  
+        <span>HR Manager</span>
+      </div>
     </div>
+
     <div class="review-card">
+      <div class="stars">★★★★★</div>
       <p>“Ik had al wat crypto gekocht maar begreep er niets van. Dankzij Joran weet ik nu hoe ik mijn wallets beveilig en scams vermijd.”</p>
-      <span><strong>– Vincent (39)</strong>, IT'er</span>
+      <div class="review-author">
+        <strong>Vincent (39)</strong>  
+        <span>IT’er</span>
+      </div>
     </div>
   </div>
 </div>
+
 
 
     <div class = "block">
