@@ -19,7 +19,7 @@
     }
     header {
       background: linear-gradient(135deg, #ede9fe, #fdf4ff);
-      padding: 3rem 1.5rem;
+      padding: 1rem 1.5rem;
       text-align: center;
     }
     header h1 {
@@ -65,39 +65,140 @@
       transform: translateY(-2px);
       box-shadow: 0 6px 16px rgba(16, 185, 129, 0.35);
     }
+        footer {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.875rem;
+      padding: 2rem 1rem;
+    }
+    .navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #6d28d9;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #374151;
+  transition: color 0.2s ease;
+}
+
+.nav-links li a:hover {
+  color: #7c3aed;
+}
+
+/* Responsive: mobiel */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+    display: none;
+    padding-top: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+
   </style>
 </head>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">MijnCryptoGids</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#watwijdoen">Wat wij doen</a></li>
+      <li><a href="#cryptoavond">CryptoAvond</a></li>
+      <li><a href="over-mij.html">Over mij</a></li>
+      <li><a href="#intake">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active');
+  }
+</script>
 <body>
+
+
   <header>
     <h1>Organiseer een CryptoAvond</h1>
-    <p>Een gezellige en leerzame avond bij jou thuis met vrienden of familie.</p>
+    <p>Gratis een gezellige en leerzame avond bij jou thuis met vrienden of familie.</p>
   </header>
-
+    <section>
+          <div style="max-width: 880px; margin: 0 auto; padding: 2rem 1.5rem;">
  <div class="block">
   <h2>Organiseer jouw CryptoAvond</h2>
   <p>Wil jij crypto op een begrijpbare manier laten uitleggen aan je vrienden of familie? Ik kom langs voor een heldere introductie, zonder hype of technisch jargon – gewoon in mensentaal.</p>
 </div>
 
 <div class="block">
-  <h3>Wat je kan verwachten:</h3>
+  <h3>Hoe gaat dit in zijn werk?</h3>
   <ul>
-    <li>📍 Locatie: bij jou thuis of op een plek naar keuze (regio Kalmthout + omgeving)</li>
-    <li>👥 Minimum 5 deelnemers</li>
-    <li>⏱️ Duur: ongeveer 45 minuten</li>
-    <li>📚 Inhoud op maat: stel op voorhand jullie vragen of interesses door</li>
-    <li>💡 Geen slides of verkooppraat – gewoon een open gesprek en eerlijke antwoorden</li>
+    <li>📍 Jij kiest de locatie – bij jou thuis of een plek naar keuze (regio Kalmthout + omgeving)</li>
+    <li>👥 Er zijn minstens 5 deelnemers nodig om de avond te organiseren</li>
+    <li>⏱️ Het gesprek duurt ongeveer 45 minuten en is laagdrempelig en ontspannen</li>
+    <li>🧠 Je kan op voorhand een onderwerp doorgeven waar jij en je gasten meer over willen weten</li>
+    <li>🗣️ Ik leg alles uit in duidelijke mensentaal – geen hype, geen technische blabla</li>
   </ul>
 </div>
+
 
 <div class="block">
   <h3>Wat jij moet doen:</h3>
   <p>Stuur mij een WhatsApp met de volgende info:</p>
   <ul>
-    <li>✅ Je naam</li>
-    <li>✅ Voorstel van datum + uur</li>
-    <li>✅ Aantal deelnemers (min. 5)</li>
-    <li>✅ De locatie (adres)</li>
-    <li>✅ Eventuele voorkennis of specifieke vragen van de groep</li>
+    <li>  Je naam</li>
+    <li>  De locatie (adres)</li>
+    <li>  Voorstel van datum + uur</li>
+    <li>  Aantal deelnemers (min. 5)</li>
+    <li>  Niveau van de groep</li>
   </ul>
 </div>
 
@@ -106,6 +207,10 @@
     📱 Contacteer mij via WhatsApp
   </a>
 </div>
+</div></section>
+  <footer>
+    &copy; 2025 MijnCryptoGids – Alle rechten voorbehouden
+  </footer>
 
 
 </body>
