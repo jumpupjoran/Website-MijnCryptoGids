@@ -3,53 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CryptoAvond organiseren – MijnCryptoGids</title>
+  <title>CryptoAvond – MijnCryptoGids</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #f9f5ff;
       color: #1f2937;
-      padding: 2rem;
-      max-width: 700px;
-      margin: auto;
+      margin: 0;
+      padding: 0;
     }
-    h1 {
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    header {
+      background: linear-gradient(135deg, #ede9fe, #fdf4ff);
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
       color: #5b21b6;
-      font-size: 2rem;
+    }
+    .block {
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      margin-bottom: 2rem;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    }
+    h2 {
+      color: #7c3aed;
       margin-bottom: 1rem;
     }
     ul {
-      padding-left: 1.2rem;
-      margin-bottom: 2rem;
+      list-style: none;
+      padding-left: 0;
     }
-    ul li {
-      margin-bottom: 0.75rem;
+    ul li::before {
+      content: '✅';
+      margin-right: 0.5rem;
     }
-    a.button {
-      display: inline-block;
+    .cta {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .cta a {
       background-color: #10b981;
       color: white;
       padding: 1rem 2rem;
-      border-radius: 10px;
+      border-radius: 12px;
+      font-weight: 600;
       text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
+      display: inline-block;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+      transition: transform 0.2s ease;
     }
-    p {
-      margin-bottom: 1rem;
+    .cta a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(16, 185, 129, 0.35);
     }
   </style>
 </head>
 <body>
-  <h1>Organiseer je eigen CryptoAvond</h1>
-  <p>Wil je een leuke en leerzame avond organiseren voor je vrienden, familie of collega's?</p>
-  <ul>
-    <li>🏠 Jij nodigt mensen uit bij je thuis (regio Kalmthout)</li>
-    <li>💬 Ik geef 30 minuten uitleg over veilig starten met crypto</li>
-    <li>🎁 Als iemand klant wordt, verdien jij een mooie commissie</li>
-  </ul>
-  <p>Alles wordt uitgelegd in gewone mensentaal. Geen hype, geen stress — gewoon eerlijk advies aan huis of online.</p>
+  <header>
+    <h1>Organiseer een CryptoAvond</h1>
+    <p>Een gezellige en leerzame avond bij jou thuis met vrienden of familie.</p>
+  </header>
 
-  <a class="button" href="https://wa.me/32468123456?text=Hallo%20Joran%2C%20ik%20wil%20een%20CryptoAvond%20organiseren!">📲 Bel of WhatsApp mij</a>
+ <div class="block">
+  <h2>Organiseer jouw CryptoAvond</h2>
+  <p>Wil jij crypto op een begrijpbare manier laten uitleggen aan je vrienden of familie? Ik kom langs voor een heldere introductie, zonder hype of technisch jargon – gewoon in mensentaal.</p>
+</div>
+
+<div class="block">
+  <h3>Wat je kan verwachten:</h3>
+  <ul>
+    <li>📍 Locatie: bij jou thuis of op een plek naar keuze (regio Kalmthout + omgeving)</li>
+    <li>👥 Minimum 5 deelnemers</li>
+    <li>⏱️ Duur: ongeveer 45 minuten</li>
+    <li>📚 Inhoud op maat: stel op voorhand jullie vragen of interesses door</li>
+    <li>💡 Geen slides of verkooppraat – gewoon een open gesprek en eerlijke antwoorden</li>
+  </ul>
+</div>
+
+<div class="block">
+  <h3>Wat jij moet doen:</h3>
+  <p>Stuur mij een WhatsApp met de volgende info:</p>
+  <ul>
+    <li>✅ Je naam</li>
+    <li>✅ Voorstel van datum + uur</li>
+    <li>✅ Aantal deelnemers (min. 5)</li>
+    <li>✅ De locatie (adres)</li>
+    <li>✅ Eventuele voorkennis of specifieke vragen van de groep</li>
+  </ul>
+</div>
+
+<div class="cta" style="text-align: center; margin-top: 2rem;">
+  <a href="https://wa.me/324XXXXXXXXX?text=Hallo%2C%20ik%20wil%20graag%20een%20CryptoAvond%20organiseren.%20Hierbij%20alvast%20wat%20info%3A%0A-%20Naam%3A%20%0A-%20Datumvoorstel%3A%20%0A-%20Locatie%3A%20%0A-%20Aantal%20deelnemers%3A%20%0A-%20Interesses%2Fvragen%20van%20de%20groep%3A" target="_blank" style="background-color: #10b981; color: white; padding: 1rem 2rem; border-radius: 10px; font-weight: 600; text-decoration: none;">
+    📱 Contacteer mij via WhatsApp
+  </a>
+</div>
+
+
 </body>
 </html>
