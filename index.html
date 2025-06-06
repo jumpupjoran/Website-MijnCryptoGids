@@ -65,6 +65,9 @@
       margin: 2rem 0;
       padding: 2rem;
     }
+    .block[id] {
+  scroll-margin-top: 100px;
+}
     h2 {
       color: var(--accent);
       margin-bottom: 1rem;
@@ -266,9 +269,9 @@
     <div class="hamburger" onclick="toggleMenu()">☰</div>
     <ul class="nav-links" id="navLinks">
       <li><a href="#watwijdoen">Wat wij doen</a></li>
-      <li><a href="#cryptoavond">CryptoAvond</a></li>
+      <li><a href="cryptoavond.html">CryptoAvond</a></li>
       <li><a href="over-mij.html">Over mij</a></li>
-      <li><a href="#intake">Contact</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 </nav>
@@ -279,6 +282,24 @@
     navLinks.classList.toggle('active');
   }
 </script>
+
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active');
+  }
+
+  // MENU SLUITEN NA KLIK OP EEN LINK
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      const navLinks = document.getElementById('navLinks');
+      if (navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+      }
+    });
+  });
+</script>
+
 
 
 <body>
@@ -301,7 +322,7 @@
         <li>🔐 Slechte beveiliging maakt je kwetsbaar, zelfs als je het "goed" doet</li>
       </ul>
     </div>
-    <div class="block">
+    <div class="block" id="watwijdoen">
       <h2>Wat wij doen</h2>
       <p>MijnCryptoGids biedt persoonlijke begeleiding. Wij helpen je niet alleen begrijpen wat crypto is, maar vooral ook:</p>
       <ul>
@@ -366,7 +387,7 @@
 
 
 
-    <div class = "block">
+    <div class = "block" id="cryptoavond">
         <h3>Organiseer je eigen CryptoAvond</h3>
     <p>Ken je vrienden of familie die interesse hebben in crypto, maar niet weten wat het inhoudt?</p>
     <p>Laat mij langskomen voor een <strong> GRATIS </strong> avond aan huis, waarin ik op eenvoudige manier uitleg geef over wat crypto juist inhoudt.</p>
@@ -381,13 +402,22 @@
 
 
 
+<div class="block" id="contact">
+  <h2>Contact</h2>
+  <p>Voor alle overige vragen of problemen waar je geen antwoord op vond op deze website, kan je mij rechtstreeks bereiken via onderstaande gegevens:</p>
+  <ul style="list-style: none; padding-left: 0;">
+    <li>📱 <strong>WhatsApp:</strong> <a href="https://wa.me/32470591023" target="_blank">+32 470 59 10 23</a></li>
+    <li>✉️ <strong>E-mail:</strong> <a href="mailto:info@mijncryptogids.be">info@mijncryptogids.be</a></li>
+    <li>📍 <strong>Locatie:</strong> Thillostraat 23, 2920 Kalmthout</li>
+  </ul>
+</div>
 
-    
   </section>
 
-  
+
   <footer>
     &copy; 2025 MijnCryptoGids – Alle rechten voorbehouden
   </footer>
+  
 </body>
 </html>
