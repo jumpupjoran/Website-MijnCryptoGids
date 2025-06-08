@@ -5,269 +5,246 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mijn CryptoGids – Veilig starten met crypto</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-:root {
-  --main-bg: #F9FAFB;
-  --accent: #2563EB;
-  --accent-light: #DBEAFE;
-  --text-dark: #1F2937;
-  --text-light: #6B7280;
-  --cta: #10B981;
-  --cta-hover: #059669;
-}
 
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--main-bg);
-  color: var(--text-dark);
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
-
-header {
-  background-color: white;
+  <style>
+    :root {
+      --main-bg: #001f3f;
+      --accent: #facc15;
+--accent-dark: #eab308;
+      --text-dark: #ffffff;
+      --text-light: #d1d5db;
+      --cta: #FFC20E;
+      --cta-text: #001f3f;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--main-bg);
+      color: var(--text-dark);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+   header {
+  background: linear-gradient(135deg, #06254d, #001f3f);
   padding: 3rem 1.5rem 2rem;
   text-align: center;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.3);
 }
 
-header h1 {
-  font-size: 2.75rem;
-  color: var(--accent);
-  margin-bottom: 0.75rem;
-}
-
-header p {
-  font-size: 1.125rem;
-  color: var(--text-light);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.cta-top, .cta-bottom {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.cta-top a, .cta-bottom a {
-  background-color: var(--cta);
-  color: white;
-  padding: 0.9rem 1.8rem;
-  border-radius: 10px;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1.05rem;
-  transition: background-color 0.2s;
-  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
-}
-
-.cta-top a:hover, .cta-bottom a:hover {
-  background-color: var(--cta-hover);
-}
-
-section {
-  max-width: 880px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-}
-
-.block {
-  background: white;
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    header p {
+      font-size: 1.125rem;
+      color: var(--text-light);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .cta-top {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .cta-top a {
+      background-color: var(--cta);
+      color: var(--cta-text);
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.2s;
+    }
+    .cta-top a:hover {
+      background-color: var(--accent-dark);
+    }
+    section {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+   .block {
+  background: linear-gradient(160deg, #06254d 0%, #041e3d 100%);
   border-radius: 16px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
   margin: 2rem 0;
   padding: 2rem;
 }
 
-h2, h3 {
-  color: var(--accent);
-  margin-bottom: 1rem;
-}
+    .block[id] {
+      scroll-margin-top: 100px;
+    }
+    h2, h3 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    ul li {
+      margin-bottom: 0.75rem;
+    }
+    .cta-bottom {
+      text-align: center;
+      margin: 3rem 0;
+    }
+    .cta-bottom a {
+      background-color: var(--cta);
+      color: var(--cta-text);
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1.125rem;
+      box-shadow: 0 4px 12px rgba(255, 194, 14, 0.25);
+      transition: transform 0.2s ease;
+    }
+    .cta-bottom a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(255, 194, 14, 0.35);
+    }
+    footer {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.875rem;
+      padding: 2rem 1rem;
+    }
 
-ul {
-  padding-left: 1.2rem;
-}
+    .reviews-section {
+      margin: 3rem 0;
+      padding: 2.5rem;
+      background-color: #06254d;
+      border-radius: 16px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      position: relative;
+    }
 
-ul li {
-  margin-bottom: 0.75rem;
-}
+    .reviews-section h2 {
+      color: var(--accent);
+      font-size: 1.75rem;
+    }
 
-footer {
-  text-align: center;
-  color: var(--text-light);
-  font-size: 0.875rem;
-  padding: 2rem 1rem;
-  background-color: white;
-  border-top: 1px solid #e5e7eb;
-}
+    .review-scroll-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 1.5rem;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 1rem;
+      padding-right: 2rem;
+      margin-right: -2rem;
+    }
 
-.navbar {
-  background-color: white;
-  border-bottom: 1px solid #e5e7eb;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
+    .review-card {
+      flex: 0 0 85%;
+      max-width: 340px;
+      scroll-snap-align: start;
+      background-color: #001a33;
+      padding: 1.5rem 1.75rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      border: 1px solid #294f7a;
+      color: var(--text-light);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 220px;
+    }
 
-.nav-container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 1rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-}
+    .review-card p {
+      margin: 1rem 0;
+    }
 
-.logo {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--accent);
-}
+    .review-author {
+      margin-top: auto;
+      font-size: 0.875rem;
+      color: #cbd5e1;
+      display: flex;
+      flex-direction: column;
+    }
 
-.hamburger {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: var(--text-dark);
-}
+    .stars {
+      color: #fbbf24;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
-}
+    .navbar {
+      background-color: #001a33;
+      border-bottom: 1px solid #003366;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
 
-.nav-links li a {
-  text-decoration: none;
-  font-weight: 500;
-  color: var(--text-dark);
-  transition: color 0.2s ease;
-}
+    .nav-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
 
-.nav-links li a:hover {
-  color: var(--accent);
-}
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
 
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: white;
+    }
 
- .nav-container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 1rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  flex-wrap: wrap;
-}
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
 
+    .nav-links li a {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--text-light);
+      transition: color 0.2s ease;
+    }
 
-  .nav-links {
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    width: 100%;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
-    border-radius: 0 0 8px 8px;
-    display: none;
-    padding: 1rem 1.5rem;
-  }
+    .nav-links li a:hover {
+      color: var(--accent);
+    }
 
-  .nav-links.active {
-    display: flex;
-  }
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
 
-  .nav-links li {
-    padding: 0.5rem 0;
-    text-align: center;
-    width: 100%;
-  }
+      .nav-links {
+        width: 100%;
+        flex-direction: column;
+        display: none;
+        padding-top: 1rem;
+      }
 
-  .nav-links li a {
-    display: block;
-    width: 100%;
-  }
-}
+      .nav-links.active {
+        display: flex;
+      }
 
+      .nav-links li {
+        padding: 0.5rem 0;
+        text-align: center;
+      }
+    }
   
-
-  .review-scroll-container {
-  display: flex;
-  overflow-x: auto;
-  gap: 1.5rem;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 1rem;
-  margin-top: 1rem;
-}
-
-.review-card {
-  flex: 0 0 85%;
-  max-width: 340px;
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  border: 1px solid #e5e7eb;
-  color: var(--text-dark);
-  scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.review-author {
-  margin-top: auto;
-  font-size: 0.875rem;
-  color: var(--text-light);
-  display: flex;
-  flex-direction: column;
-}
-
-.stars {
-  color: #fbbf24;
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-.reviews-section {
-  margin: 3rem 0;
-  padding: 2rem;
-  background-color: #f1f5f9;
-  border-radius: 16px;
-}
-.cta-link-button {
-  display: inline-block;
-  background-color: var(--cta);
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  margin-top: 1rem;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-  box-shadow: 0 3px 10px rgba(16, 185, 129, 0.2);
-}
-
-.cta-link-button:hover {
-  background-color: var(--cta-hover);
-  transform: translateY(-2px);
-}
-
-
-
-}
-
+    
   </style>
 </head>
 
@@ -350,7 +327,7 @@ footer {
 
     </div>
 
-   <!-- <div class="reviews-section">
+   <div class="reviews-section">
   <h2>Wat anderen zeggen over ons</h2>
   <p style="font-size: 0.9rem; color: #9ca3af; margin-top: -1rem;">👉 Swipe om meer reviews te zien</p>
 
@@ -391,7 +368,7 @@ footer {
       </div>
     </div>
   </div>
-</div> -->
+</div>
 
 
 
@@ -404,8 +381,7 @@ footer {
       <li>💡 Ik leg 30 minuten helder en eenvoudig uit wat crypto echt is</li>
       <li>💰 Wordt iemand klant? Dan verdien jij een mooie commissie</li>
     </ul>
-    <a href="cryptoavond.html" class="cta-link-button">👉 Organiseer jouw avond</a>
-
+    <a href="cryptoavond.html">👉 Organiseer jouw avond</a>
     </div>
 
 

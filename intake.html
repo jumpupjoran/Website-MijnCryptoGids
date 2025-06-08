@@ -3,40 +3,203 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Boek je intakegesprek – MijnCryptoGids</title>
+  <title>Boek je gratis intakegesprek – MijnCryptoGids</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --main-bg: #F9FAFB;
+      --accent: #2563EB;
+      --accent-light: #DBEAFE;
+      --text-dark: #1F2937;
+      --text-light: #6B7280;
+      --cta: #10B981;
+      --cta-hover: #059669;
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f5ff;
-      color: #1f2937;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--main-bg);
+      color: var(--text-dark);
       margin: 0;
-      padding: 2rem 1.5rem;
+      padding: 0;
       line-height: 1.6;
     }
-    h1 {
+
+    header {
+      background-color: white;
+      padding: 3rem 1.5rem 2rem;
       text-align: center;
-      color: #6d28d9;
-      margin-bottom: 1rem;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
     }
-    p {
-      text-align: center;
-      color: #374151;
-      max-width: 700px;
-      margin: 0 auto 2rem;
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
     }
-    .calendly-inline-widget {
-      max-width: 800px;
+
+    header p {
+      color: var(--text-light);
+      font-size: 1.125rem;
+      max-width: 600px;
       margin: 0 auto;
+    }
+
+    .calendly-inline-widget {
+      max-width: 860px;
+      margin: 2rem auto;
+    }
+
+    footer {
+      background-color: white;
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-light);
+      font-size: 0.9rem;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .navbar {
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text-dark);
+  transition: color 0.2s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--accent);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+ .nav-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    border-radius: 0 0 8px 8px;
+    display: none;
+    padding: 1rem 1.5rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 0.5rem 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+  }
     }
   </style>
 </head>
-<body>
-  <h1>Plan jouw gratis intakegesprek</h1>
-  <p>Je kiest zelf wanneer en hoe je wilt afspreken: online, telefonisch of bij jou thuis (regio Kalmthout).</p>
 
-  <!-- Calendly inline widget begin -->
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">MijnCryptoGids</div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#watwijdoen">Wat wij doen</a></li>
+        <li><a href="cryptoavond.html">CryptoAvond</a></li>
+        <li><a href="over-mij.html">Over mij</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        const navLinks = document.getElementById('navLinks');
+        if (navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+        }
+      });
+    });
+  </script>
+
+  <header>
+    <h1>Plan jouw gratis intakegesprek</h1>
+    <p>Je kiest zelf wanneer en hoe je wilt afspreken: online, telefonisch of bij jou thuis (regio Kalmthout).</p>
+  </header>
+
+  <!-- Calendly inline widget -->
   <div class="calendly-inline-widget" data-url="https://calendly.com/mijncryptogids-info/gratis-intakegesprek" style="min-width:320px;height:700px;"></div>
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-  <!-- Calendly inline widget end -->
+
+  <footer>
+    &copy; 2025 MijnCryptoGids – Alle rechten voorbehouden
+  </footer>
 </body>
 </html>

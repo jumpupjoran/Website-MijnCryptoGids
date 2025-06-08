@@ -5,144 +5,201 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CryptoAvond – MijnCryptoGids</title>
    <style>
-    :root {
-      --main-bg: #001f3f;
-      --accent: #FFC20E;
-      --accent-dark: #e0ae00;
-      --text-dark: #ffffff;
-      --text-light: #d1d5db;
-      --cta: #FFC20E;
-      --cta-text: #001f3f;
+   :root {
+      --main-bg: #F9FAFB;
+      --accent: #2563EB;
+      --accent-light: #DBEAFE;
+      --text-dark: #1F2937;
+      --text-light: #6B7280;
+      --cta: #10B981;
+      --cta-hover: #059669;
     }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Inter', sans-serif;
       background-color: var(--main-bg);
       color: var(--text-dark);
       margin: 0;
       padding: 0;
+      line-height: 1.6;
     }
-    .container {
+
+     .navbar {
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text-dark);
+  transition: color 0.2s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--accent);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+ .nav-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    border-radius: 0 0 8px 8px;
+    display: none;
+    padding: 1rem 1.5rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 0.5rem 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+  }
+    }
+
+    header {
+      background-color: white;
+      padding: 3rem 1.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    header p {
+      color: var(--text-light);
+      font-size: 1.125rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    section {
       max-width: 860px;
       margin: 0 auto;
       padding: 2rem 1.5rem;
     }
-    header {
-      background-color: var(--main-bg);
-      padding: 1rem 1.5rem;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      color: var(--accent);
-    }
-    header p {
-      color: var(--text-light);
-    }
+
     .block {
-      background: #06254d;
-      padding: 2rem;
+      background: white;
       border-radius: 16px;
-      margin-bottom: 2rem;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      margin: 2rem 0;
+      padding: 2rem;
     }
+
     h2, h3 {
       color: var(--accent);
       margin-bottom: 1rem;
     }
+
     ul {
-      list-style: none;
-      padding-left: 0;
+      padding-left: 1.2rem;
     }
+
     ul li, .block p {
-      color: var(--text-light);
+      color: var(--text-dark);
+      margin-bottom: 0.75rem;
     }
+
     .cta {
       text-align: center;
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
+
     .cta a {
       background-color: var(--cta);
-      color: var(--cta-text);
+      color: white;
       padding: 1rem 2rem;
       border-radius: 12px;
       font-weight: 600;
       text-decoration: none;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       display: inline-block;
-      box-shadow: 0 4px 12px rgba(255, 194, 14, 0.25);
-      transition: transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
+
     .cta a:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(255, 194, 14, 0.35);
+      box-shadow: 0 6px 18px rgba(16, 185, 129, 0.3);
     }
+
     footer {
+      background-color: white;
       text-align: center;
       color: var(--text-light);
       font-size: 0.875rem;
       padding: 2rem 1rem;
-    }
-    .navbar {
-      background-color: #001a33;
-      border-bottom: 1px solid #003366;
-      position: sticky;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-    }
-    .nav-container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    .logo {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--accent);
-    }
-    .hamburger {
-      display: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: white;
-    }
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-      margin: 0;
-      padding: 0;
-    }
-    .nav-links li a {
-      text-decoration: none;
-      font-weight: 500;
-      color: var(--text-light);
-      transition: color 0.2s ease;
-    }
-    .nav-links li a:hover {
-      color: var(--accent);
-    }
-    @media (max-width: 768px) {
-      .hamburger {
-        display: block;
-      }
-      .nav-links {
-        width: 100%;
-        flex-direction: column;
-        display: none;
-        padding-top: 1rem;
-      }
-      .nav-links.active {
-        display: flex;
-      }
-      .nav-links li {
-        padding: 0.5rem 0;
-        text-align: center;
-      }
+      border-top: 1px solid #e5e7eb;
     }
   </style>
 </head>
@@ -170,7 +227,7 @@
 
 
   <header>
-    <h1>Organiseer jouw CryptoAvond</h1>
+    <h1>Jouw gratis CryptoAvond</h1>
     <p>Gratis een gezellige en leerzame avond bij jou thuis met vrienden of familie.</p>
   </header>
     <section>
